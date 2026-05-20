@@ -1,5 +1,5 @@
 const form = document.getElementById("new-post-form")
-const baseURL = `https://megaphone-server.onrender.com`
+const baseURL = `https://mymegaphone-backend.onrender.com`
 const deleteEnabled = false
 
 const getPosts = async () => {
