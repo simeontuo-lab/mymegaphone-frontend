@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  color: #111111;
+  background: #ffffff;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 720px;
+  padding: 24px 16px 40px;
+  background: #ffffff;
+  color: #111111;
+}
+
+#new-post-form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+input,
+button {
+  width: 100%;
+  border: 1px solid #111111;
+  border-radius: 0;
+  background: #ffffff;
+  color: inherit;
+  font: inherit;
+}
+
+input {
+  height: 36px;
+  padding: 4px 10px;
+  line-height: 1.2;
+}
+
+button {
+  min-height: 48px;
+  padding: 12px;
+}
+
+input::placeholder {
+  color: #666666;
+}
+
+input:focus,
+button:focus {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+button {
+  grid-column: 2;
+  justify-self: center;
+  width: auto;
+  min-width: 160px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f2f2f2;
+}
+
+#all-posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#all-posts:empty::before {
+  content: 'No posts yet. Your next post will appear here.';
+  display: block;
+  padding: 16px 0;
+  color: #666666;
+}
+
+.post {
+  padding: 16px 0;
+  border-top: 1px solid #cccccc;
+}
+
+.post-body,
+.post-meta {
+  margin: 0;
+}
+
+.post-body {
+  font-size: 1.3em;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.post-meta {
+  color: #8b8484;
+  display: flex;
+  flex-direction: row;
+  margin-top: 6px;
+}
+
+.post-meta p {
+  margin: 0 12px;
+}
+
+.delete-button {
+    cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  #new-post-form {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    grid-column: 1;
+    width: 100%;
+  }
+}
