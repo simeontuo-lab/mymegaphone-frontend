@@ -1,4 +1,4 @@
-const baseURL = `https://megaphone-server.onrender.com`
+const baseURL = `https://mymegaphone-backend.onrender.com`
 const form = document.getElementById("new-user-form")
 const statusMessage = document.getElementById("status-message")
 
