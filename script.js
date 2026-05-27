@@ -66,35 +66,4 @@ const addPostsToPage = (posts) => {
         })
 
         newListItem.appendChild(postBody)
-        newListItem.appendChild(postMeta)
-
-        if (deleteEnabled) {
-            postMeta.appendChild(deleteButton)
-        }
-
-        allPosts.appendChild(newListItem)
-    })
-}
-
-getPosts()
-
-form.addEventListener("submit", async (event) => {
-    event.preventDefault()
-
-    await fetch(
-        `${baseURL}/posts`,
-        {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                body: form.elements.body.value,
-                author: form.elements.user.value
-            })
-        }
-    ).then((response) => {
-        return response.json()
-    })
-
-    getPosts()
-    form.reset()
-})
+        newListItem.appendChild(postMeta
